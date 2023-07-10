@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: #081b29;
+ 
+}
+body {
+   
+    color: #ededed;
+}
+
+html{scroll-behavior: smooth;}
+.header {
+    position: fixed;
+    top:0;
+    right: 0;
+    width:100%;
+    padding: 20px 10%;
+    background: #081b29;
+    display:flex;
+   
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:#081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s ;
+}
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+ 
+    font-weight: 500;
+    margin-left: 35px;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+    box-shadow: 0 0 1 rem;
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color:aliceblue;
+
+}
+.home {
+    height: 100vh;
+    background-color: #081b29;
+    background-image : url('./paste.jpeg') ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 20%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+
+}
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:#081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s ;
+}
+
+.home-content h3 {
+    position: relative;
+    font: size 32px;
+    font-weight: 700;
+    color: #00abf0;
+} 
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:#081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s ;
+}
+
+.home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+
+    
+}
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:#081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s ;
+}
+
+.home-content   .btn {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+width: 345px;
+height: 50px;
+
+}
+
+
+.btn  {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 7%;
+    background: #00abf0;
+    border: 2px solid ;
+    box-shadow:0 0 1rem ;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;    
+}
+.btn:hover {
+    color: #00abf0;
+}
+
+
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#081b29;
+    z-index: -1;
+    transition: .5s;
+    
+}
+.btn:hover::before {
+    width: 100%;
+}
+
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    
+    display: flex;
+    justify-content: space-between;
+    box-shadow:10px ;
+}
+
+    .home-sci a{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid #00abf0;
+        
+        border-radius: 50%;
+        font-size: 20px;
+        color: #00abf0;
+        text-decoration: none;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .home-sci::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background:#081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 2.5s ;
+        z-index: 2;
+        
+    }
+    .home-sci a:hover{
+        color: #081b29;
+        box-shadow:0 0 1rem ;
+    }
+    .home-sci a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background:#00abf0;
+        z-index: -1;
+        transition: .5s;
+    }
+    .home-sci a:hover::before {
+        width: 100%;
+    }
+    .home-imgHover {
+        position: absolute;
+        top: 0;
+        
+        right: 10px;
+        width: 630px;
+        height: 100%;
+        background: transparent;
+        transition: 3s ;
+        animation: manipActiveHover .1s forwards;
+        animation-delay: 4s;
+        pointer-events: none;
+    }
+    .home-imgHover::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 120%;
+        height: 100%;
+        background:#081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 3s ;
+        z-index: 100;
+    }
+.home-imgHover:hover {
+    background: #081b29;
+    opacity: .8;
+
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100%{
+        width: 0;
+
+    }
+}
+@keyframes manipActiveHover {
+    100%{
+        pointer-events: auto;
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+  }
+
+  .grid-item {
+    border: 1px solid #00abf0;
+    padding: 10px;
+  }
+
+.projects{
+    background-color: black;
+}
+
+.projects h2{
+    margin-bottom: 4rem;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.projects-container .portjects-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(#00abf0);
+    overflow: hidden;
+    display: flex;
+
+}
+.projects-box img{
+    width: 100%;
+}
